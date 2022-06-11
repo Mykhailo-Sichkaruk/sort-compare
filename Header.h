@@ -1,4 +1,4 @@
-// всі бібліотеки та дефайни
+// пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 #pragma once
 #include <stdio.h>
 #include <windows.h>
@@ -15,4 +15,3 @@ void output(int const p, int const m, int const n);
 void input(int const p, int const m, int const n, int const mode);
 
 void menu();
-

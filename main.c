@@ -5,9 +5,7 @@ int A[pmax][mmax][nmax];
 int main()
 {
 
-menu();
+    menu();
 
-return 0;
+    return 0;
 }
-
-
