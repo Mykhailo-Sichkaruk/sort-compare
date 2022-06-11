@@ -1,4 +1,4 @@
-//меню
+//Menu
 #include "Header.h"
 #include "Time.h"
 #include "Sort.h"
@@ -10,8 +10,8 @@ void menu()
 int p, m, n;
 int choise, flag = 1;
 
-printf("Перевірка роботи всіх алгоритмів  -  1\n");
-printf("Тестування часу роботи алгоритмів -  2\n");
+printf("Test corctness of all sorts  -  1\n");
+printf("Test time of all sorts -  2\n");
 scanf("%d", &choise);
 
 switch(choise)
@@ -19,32 +19,32 @@ switch(choise)
 
    case 1:
 
-   	printf("Введіть кількість перерізів\n");
+   	printf("Enter number of 2D matrixs: \n");
    	scanf("%d", &p);
 
 	m = 4;
 	n = 4;
 
-	printf("\nПочатковий масив\n");
+	printf("\nDefault array\n");
 	input(p, m, n, 2);
 	output(p, m, n);
-	printf("Сортування алгоритмом 1\n");
+	printf("Sort with first algorithm\n");
 	sort_1(p, m, n);
 	output(p, m, n);
 
 
-	printf("\nПочатковий масив\n");
+	printf("\nDefault array\n");
 	input(p, m, n, 2);
 	output(p, m, n);
-	printf("Сортування алгоритмом 2\n");
+	printf("Sort with second algorithm\n");
 	sort_2(p, m, n);
 	output(p, m, n);
 
 
-	printf("\nПочатковий масив\n");
+	printf("\nDefault array\n");
 	input(p, m, n, 2);
 	output(p, m, n);
-	printf("Сортування алгоритмом 3\n");
+	printf("Sort with third algorithm 1\n");
 	sort_3(p, m, n);
 	output(p, m, n);
 
@@ -53,9 +53,9 @@ switch(choise)
 
 	case 2:
 
-	printf("Запуск тестування часу всіх алгоритмів сортування\n");
-	printf("1 - Всі\n");
-	printf("2 - Один\n");
+	printf("Start time test of \n");
+	printf("1 - all algorithms\n");
+	printf("2 - one algorithm\n");
 	scanf("%d", &choise);
 
 	switch(choise)
@@ -64,20 +64,20 @@ switch(choise)
 
 	    case 1:
 
-	    printf("\nВведіть P\n");
+	    printf("\nEnter P\n");
 	    scanf("%d", &p);
-	    printf("\nВведіть M\n");
+	    printf("\nEnter M\n");
 	    scanf("%d", &m);
-	    printf("\nВведіть N\n");
+	    printf("\nEnter N\n");
 	    scanf("%d", &n);
 
 		printf("\n______________________________________________________________________________________________________________\n");
-		printf("                                  |Впорядкований| |Випадковий| |Обернено впорядкований| \n");
-		printf("Сорт 1 |    Прямий вибір 6      | |%10.0f   | |%10.0f | |%10.0f        |\n", (double)time_sort_1(p, m, n, 1), (double)time_sort_1(p, m, n, 2), (double)time_sort_1(p, m, n, 3));
+		printf("                                         |Sorted   | |Random | |Reverse-Sorted| \n");
+		printf("Sort 1 |    Selection sort в„–6          | |%10.0f   | |%10.0f | |%10.0f        |\n", (double)time_sort_1(p, m, n, 1), (double)time_sort_1(p, m, n, 2), (double)time_sort_1(p, m, n, 3));
 		printf("________________________________________________________________________________________________________________\n");
-		printf("Сорт 2 |    Прямий обмін 1      | |%10.0f   | |%10.0f | |%10.0f        |\n", (double)time_sort_2(p, m, n, 1), (double)time_sort_2(p, m, n, 2), (double)time_sort_2(p, m, n, 3));
+		printf("Sort 2 |    Bubble sort (exchange)     | |%10.0f   | |%10.0f | |%10.0f        |\n", (double)time_sort_2(p, m, n, 1), (double)time_sort_2(p, m, n, 2), (double)time_sort_2(p, m, n, 3));
 		printf("________________________________________________________________________________________________________________\n");
-		printf("Сорт 3 |Гібрид (вибір 4 - обмін)| |%10.0f   | |%10.0f | |%10.0f        |\n", (double)time_sort_3(p, m, n, 1), (double)time_sort_3(p, m, n, 2), (double)time_sort_3(p, m, n, 3));
+		printf("Sort 3 |Hybrid (Selection 4 - Exchange)| |%10.0f   | |%10.0f | |%10.0f        |\n", (double)time_sort_3(p, m, n, 1), (double)time_sort_3(p, m, n, 2), (double)time_sort_3(p, m, n, 3));
 
 		break;
 
@@ -85,51 +85,51 @@ switch(choise)
         case 2:
 
 
-        printf("    Сортувати - \n    1 - Впорядкований\n    2 - Випадковий\n    3 -  Обернено впорядкований\n");
+        printf("    SOrt - \n    1 - Sorted\n    2 - Random\n    3 -  Reverse-Sorted\n");
         scanf("%d", &mode_arr);
-        printf("Метод сортування\n");
-        printf("1 - Прямий вибір (6)\n");
-        printf("2 - Прямий обмін (6)\n");
-        printf("3 - Вибір (4) - Обмін (6)\n");
+        printf("РњРµС‚РѕРґ СЃРѕСЂС‚СѓРІР°РЅРЅСЏ\n");
+        printf("1 - Selection\n");
+        printf("2 - Bubble (exchange)\n");
+        printf("3 - Hybrid (Selection 4 - Exchange)\n");
         scanf("%d", &mode_sort);
 
         switch(mode_sort)
         {
             case 1:
-            printf("Введіть розміри масиву\n");
+            printf("Enter array`s sizes\n");
             printf("P = \n");
             scanf("%d", &p);
             printf("M = \n");
             scanf("%d", &m);
             printf("N = \n");
             scanf("%d", &n);
-            printf("Час сортування = %f", (double)time_sort_1(p, m, n, mode_arr));
+            printf("Sort time = %f", (double)time_sort_1(p, m, n, mode_arr));
 
             break;
 
 
             case 2:
-            printf("Введыть розміри масиву\n");
+            printf("Enter array`s sizes\n");
             printf("P = \n");
             scanf("%d", &p);
             printf("M = \n");
             scanf("%d", &m);
             printf("N = \n");
             scanf("%d", &n);
-            printf("Час сортування = %f", (double)time_sort_2(p, m, n, mode_arr));
+            printf("Sort time = %f", (double)time_sort_2(p, m, n, mode_arr));
 
             break;
 
 
             case 3:
-            printf("Введыть розміри масиву\n");
+            printf("Enter array`s sizes\n");
             printf("P = \n");
             scanf("%d", &p);
             printf("M = \n");
             scanf("%d", &m);
             printf("N = \n");
             scanf("%d", &n);
-            printf("Час сортування = %f", (double)time_sort_3(p, m, n, mode_arr));
+            printf("Sort time = %f", (double)time_sort_3(p, m, n, mode_arr));
 
             break;
 
@@ -150,14 +150,14 @@ switch(choise)
 
 
 }
-printf("\nМеню?\n 1 - Так\n2 - Закрити програму \n");
+printf("\nMenu?\n 1 - Yes\n2 - Exit \n");
 scanf("%d", &flag);
 
 while(flag == 1)
 {
 system("cls");
 menu();
-printf("\n\nМеню?\n 1 - Так\n2 - Закрити програму \n");
+printf("\n\nMenu?\n 1 - Yes\n2 - Exit \n");
 scanf("%d", &flag);
 
 }
