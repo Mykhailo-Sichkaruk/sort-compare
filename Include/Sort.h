@@ -1,4 +1,3 @@
-//функції сортування
 #pragma once
 #include "Header.h"
 

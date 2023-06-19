@@ -1,7 +1,5 @@
-// �� �������� �� �������
 #pragma once
 #include <stdio.h>
-#include <windows.h>
 #include <time.h>
 
 #define pmax 100
