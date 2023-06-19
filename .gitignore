@@ -1,0 +1,17 @@
+# Compiled object files
+*.o
+
+# Executable files
+myproject
+
+# CMake build directory
+build/
+
+# macOS specific files
+.DS_Store
+
+# Linux specific files
+*~
+
+# Visual Studio Code specific files
+.vscode/
